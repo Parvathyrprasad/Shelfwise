@@ -1,0 +1,75 @@
+
+<div class="app-shell">
+
+  <aside class="sidebar">
+    <a class="brand" routerLink="/dashboard">
+      <span class="brand-mark">S</span>
+      <span class="brand-name">shelfwise</span>
+    </a>
+
+    <div class="nav-section">
+      <p class="nav-label">WORKSPACE</p>
+
+      <nav class="main-nav" aria-label="Main navigation">
+        <a routerLink="/dashboard" routerLinkActive="active"
+           [routerLinkActiveOptions]="{ exact: true }">
+          <span class="nav-icon">▦</span>
+          <span>Dashboard</span>
+        </a>
+
+        <a routerLink="/books" routerLinkActive="active">
+          <span class="nav-icon">▤</span>
+          <span>Books</span>
+        </a>
+
+        <a routerLink="/members" routerLinkActive="active">
+          <span class="nav-icon">♙</span>
+          <span>Members</span>
+        </a>
+
+        <a routerLink="/loans" routerLinkActive="active">
+          <span class="nav-icon">⇄</span>
+          <span>Loans</span>
+        </a>
+      </nav>
+    </div>
+
+    <div class="sidebar-footer">
+      <div class="profile-avatar">PR</div>
+      <div class="profile-info">
+        <strong>Library Admin</strong>
+        <span>Administrator</span>
+      </div>
+    </div>
+  </aside>
+
+  <div class="main-area">
+    <header class="topbar">
+      <div class="breadcrumb">
+        <span>Workspace</span>
+        <span class="breadcrumb-divider">/</span>
+        <strong>Shelfwise</strong>
+      </div>
+
+      <div class="topbar-actions">
+        <label class="global-search">
+          <span>⌕</span>
+          <input type="search" placeholder="Search your library..."
+                 aria-label="Search your library">
+          <kbd>⌘ K</kbd>
+        </label>
+
+        <div class="notification-indicator" aria-label="Notifications">
+          <span>♧</span>
+          <i></i>
+        </div>
+      </div>
+    </header>
+
+    <main class="page-content">
+      <router-outlet />
+    </main>
+  </div>
+
+</div>
+
